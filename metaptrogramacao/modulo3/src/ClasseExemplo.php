@@ -13,9 +13,9 @@ final class ClasseExemplo implements \JsonSerializable
         echo 'Executando construtor de ' . __CLASS__;
     }
 
-    public function metodoPublico(): void
+    public function metodoPublico(string $mensagem,int $numero): void
     {
-        echo 'Executando método público';
+        echo 'Executando método público ' .  ' ' . $mensagem . ' ' . $numero . PHP_EOL;
     }
 
     protected function metodoProtegido(): int
@@ -29,7 +29,7 @@ final class ClasseExemplo implements \JsonSerializable
         echo 'Executando método privado';
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize() : array
     {
         return get_object_vars($this);
     }

@@ -6,9 +6,12 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $reflectionClass = new ReflectionClass(ClasseExemplo::class);
 
-$modifiers = $reflectionClass->getModifiers();
-$modifierNames = Reflection::getModifierNames($modifiers);
+$objetoClasseExemplo = $reflectionClass->newInstanceWithOutConstructor();
 
-$objetoClasseExemplo = $reflectionClass->newInstance();
+$reflectionMethod = $reflectionClass->getMethod('metodoPublico');
+var_dump($reflectionMethod->getParameters());
 
-echo json_encode($objetoClasseExemplo);
+$reflectionMethod->invokeArgs($objetoClasseExemplo, ["Ante diegmon", 42]);
+
+
+
