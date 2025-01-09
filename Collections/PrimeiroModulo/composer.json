@@ -1,0 +1,15 @@
+{
+    "name": "array/curso",
+    "autoload": {
+        "psr-4": {
+            "Array\\Curso\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "estagiario-dev2",
+            "email": "estagiario-dev2@escape79.com.br"
+        }
+    ],
+    "require": {}
+}
