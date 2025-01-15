@@ -1,0 +1,8 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+        "react/event-loop": "1.1.1",
+        "react/stream": "1.1.1",
+        "cboden/ratchet": "^0.4.4"
+    }
+}
