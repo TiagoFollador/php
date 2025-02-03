@@ -1,0 +1,29 @@
+version: '3'
+services:
+  php:
+    build: .
+    volumes:
+      - ./:/app
+    working_dir: /app
+
+  relacional:
+    image: postgres:15.4
+    environment:
+      POSTGRES_PASSWORD: senha_postgres
+  chave_valor: 
+    image: redis:7.2.0
+  em_memoria:
+    image: memcached:1.6.21
+  documentos:
+    image: mongo:7.0.0
+    environment: 
+      MONGO_INITDB_DATABASE: e_comerce
+      MONGO_INITDB_ROOT_PASSWORD: senha
+      MONGO_INITDB_ROOT_USERNAME: usuario
+  busca_textual:
+    image: elasticsearch:8.10.2
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+  colunares:
+    image: cassandra:4.1.3

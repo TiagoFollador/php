@@ -1,0 +1,20 @@
+{
+    "require": {
+        "ext-pdo": "*",
+        "ext-redis": "*",
+        "ext-memcached": "*",
+        "ext-mongodb": "*",
+        "mongodb/mongodb": "^1.20",
+        "aws/aws-sdk-php": "^3.337",
+        "elasticsearch/elasticsearch": "^8.10",
+        "ext-cassandra": "*",
+        "php-amqplib/php-amqplib": "3.5.4",
+        "psr/http-message": "^1.1",
+        "laudis/neo4j-php-client": "3.0.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
