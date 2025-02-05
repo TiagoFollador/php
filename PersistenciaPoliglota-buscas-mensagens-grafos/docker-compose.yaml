@@ -5,6 +5,8 @@ services:
     volumes:
       - ./:/app
     working_dir: /app
+    ports:
+      - "8000:8000"
 
   relacional:
     image: postgres:15.4
@@ -27,3 +29,12 @@ services:
       - discovery.type=single-node
   colunares:
     image: cassandra:4.1.3
+  mensageria:
+    image: rabbitmq:3.9.29
+  grafos:
+    image: neo4j:5.13.0-community
+    environment:
+      NEO4J_AUTH: neo4j/12345678
+    ports:
+      - 7474:7474
+      - 7687:7687

@@ -10,4 +10,14 @@ $cluster = Cassandra::cluster()
 
 $session = $cluster->connect('e_comerce');
 
-var_dump($session);
+/*
+$statement = $session->prepare('INSERT INTO products (poduct_id, name, price) VALUES (?,?,?);');
+$rows = $session->execute($statement, [ //retorna um objeto row, com um array vazio
+    'arguments' => [
+        'product_id' => 1,
+        'name' => 'Produto',
+        'price' => 1000_00
+    ]
+]); */
+
+$rows = $session->execute('SELECT * FROM products;');
