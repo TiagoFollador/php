@@ -1,0 +1,16 @@
+{
+    "name": "tiago/design-pattern-comportamental",
+    "description": "curso de desin pattern alura",
+    "autoload": {
+        "psr-4": {
+            "Tiago\\DesignPattern\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TiagoFollador",
+            "email": "tiagobritofollador@gmail.com"
+        }
+    ],
+    "require": {}
+}
